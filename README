@@ -1,0 +1,8 @@
+Pass the service name to be checked at the first/only command line parameter
+e.g:
+  python status.py docker
+
+Runs by default on http, 0.0.0.0:5000
+
+Returns 500 error and the string "false" if the service is not running
+Returns 200 and the string "true" if the service is running
