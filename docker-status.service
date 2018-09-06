@@ -1,0 +1,12 @@
+[Unit]
+Description=HTTP access to docker systemd service status
+
+[Service]
+User=nobody
+# WorkingDirectory=/somewhere
+ExecStart=/usr/bin/python status.py docker
+Restart=always
+RestartSec=2
+
+[Install]
+WantedBy=multi-user.target
